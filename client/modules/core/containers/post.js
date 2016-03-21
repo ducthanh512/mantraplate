@@ -5,11 +5,11 @@ export const composer = ({context, postId}, onData) => {
   const {Meteor, Collections} = context();
 
   if (Meteor.subscribe('posts.single', postId).ready()) {
-    alert('1');
+  //  alert('1');
     const post = Collections.Posts.findOne(postId);
     onData(null, {post});
   } else {
-    alert(postId);
+  //  alert(postId);
     const post = Collections.Posts.findOne(postId);
     if (post) {
       onData(null, {post});

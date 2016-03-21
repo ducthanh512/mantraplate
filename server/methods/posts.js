@@ -4,12 +4,8 @@ import {check} from 'meteor/check';
 
 export default function () {
 
-
-  alert('server ..');
-
   Meteor.methods({
     'posts.create'(_id, title, content) {
-      alert('dang post');
       check(_id, String);
       check(title, String);
       check(content, String);
